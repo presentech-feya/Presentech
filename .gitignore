@@ -1,0 +1,100 @@
+# =========================
+# Entorno y Secretos
+# =========================
+.env
+.env.*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =========================
+# IDEs y Editores
+# =========================
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Frontend (Node.js / React / Vue / Angular)
+# =========================
+src/frontend/node_modules/
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+dist/
+build/
+.next/
+out/
+coverage/
+.nuxt/
+.vuepress/dist
+
+# =========================
+# Backend & Tests (.NET / C#)
+# =========================
+[Bb]in/
+[Oo]bj/
+*.userprefs
+# Archivos de caché de NuGet
+*.nupkg
+# Archivos autogenerados de test
+TestResults/
+*.coverage
+*.coveragexml
+# Archivos temporales de compilación
+*.log
+# Opciones de usuario locales
+*.local
+
+# Configuraciones y secretos de appsettings
+appsettings.json
+appsettings.*.json
+
+# Visual Studio / .NET Core / .NET 10
+.vs/
+.vscode/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.dbmdl
+*.jfm
+*.pfx
+*.publishsettings
+# dotnet watch cache
+.hotreload/
+
+# =========================
+# SO / Archivos de sistema
+# =========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# DDL manual de opiniones
+DDL_Opiniones
+
+# Plan local de implementacion OCR
+Plan_Implementacion_OCR.md
+
+# Plan local de implementacion matriz de asistencia administrativa
+Plan_Implementacion_Matriz.md
+
+Formato Simplificado.xlsx
