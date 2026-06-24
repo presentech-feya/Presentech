@@ -22,6 +22,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./src/backend
-          file: Dockerfile
+          file: ./src/backend/Dockerfile
           push: true
           tags: presentechfeya/presentech:latest
