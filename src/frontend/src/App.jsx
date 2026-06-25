@@ -9,6 +9,7 @@ import { PlaceholderPage } from './pages/PlaceholderPage.jsx'
 import { AdminRoute } from './routes/AdminRoute.jsx'
 import { AdminLoginPage } from './pages/AdminLoginPage'
 import { AdminPage } from './pages/AdminPage'
+import { CreditosPage } from './pages/CreditosPage'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
 
       {/* Docentes Routes */}
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/creditos" element={<CreditosPage />} />
       <Route
         path="/"
         element={

@@ -149,7 +149,35 @@ export function DashboardView({ role }) {
               />
             </div>
 
-            {role === 'admin' ? <MatrizAsistenciaAdmin /> : null}
+            {role === 'admin' ? (
+              <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_340px]">
+                <div className="min-w-0">
+                  <MatrizAsistenciaAdmin />
+                </div>
+                <div className="space-y-6">
+                  <div className="overflow-hidden rounded-2xl border border-border/50 bg-card/85 shadow-sm">
+                    <div className="border-b border-border/50 px-4 py-3">
+                      <h3 className="text-sm font-semibold text-foreground flex items-center gap-2">
+                        <i className="fa-solid fa-video text-primary"></i>
+                        <span>Video Tutorial Administradores</span>
+                      </h3>
+                      <p className="mt-0.5 text-xs text-muted-foreground">
+                        Guía de administración del sistema.
+                      </p>
+                    </div>
+                    <div className="aspect-video bg-muted">
+                      <iframe
+                        className="h-full w-full"
+                        src="https://drive.google.com/file/d/1MPlbbSf4l1TuLaNYDIwI0kH7DBQ8S9p0/preview"
+                        title="Video tutorial Admin"
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : null}
 
             {role !== 'admin' ? (
               <RiskPanel estudiantes={dashboardData.estudiantes_en_riesgo ?? []} />

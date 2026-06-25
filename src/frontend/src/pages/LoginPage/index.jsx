@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate, Link } from 'react-router-dom'
 import { Button, Input } from '../../components/common'
 import { Footer } from '../../components/layout'
 import { getApiErrorMessage } from '../../services/api'
@@ -36,7 +36,7 @@ export function LoginPage() {
 
   return (
     <div className="flex min-h-svh flex-col bg-gradient-to-br from-secondary via-background to-primary/10">
-    <main className="relative flex flex-1 items-center justify-center overflow-hidden">
+    <main className="relative flex min-h-svh w-full items-center justify-center overflow-hidden py-12">
       {/* Animated background blobs */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float" />
       <div className="absolute top-40 -right-32 w-96 h-96 bg-secondary-foreground/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float" style={{ animationDelay: '2s' }} />
@@ -109,9 +109,13 @@ export function LoginPage() {
             </Button>
           </div>
         </form>
-        <p className="mt-10 text-center text-sm text-muted-foreground font-medium z-30">
-          Fe y Alegría &middot; Innovación Educativa
-        </p>
+        <div className="mt-8 text-center text-sm text-muted-foreground font-medium z-30 flex flex-col items-center gap-1.5">
+          <span>Fe y Alegría &middot; Innovación Educativa</span>
+          <Link to="/creditos" className="text-primary hover:text-primary-dark hover:underline font-semibold transition-colors flex items-center gap-1">
+            <span>Créditos del Proyecto</span>
+            <span className="text-xs">&rarr;</span>
+          </Link>
+        </div>
       </section>
     </main>
     <Footer />

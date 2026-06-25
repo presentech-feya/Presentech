@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { institutionConfig } from '../../../config/institution'
 
 const contactItems = [
@@ -96,8 +97,12 @@ export function Footer({ withMobileNavSpacing = false }) {
         </address>
       </div>
 
-      <div className="border-t border-border/60 bg-primary-dark px-4 py-3 text-center text-xs text-white/80">
-        © {new Date().getFullYear()} PresentTech · Unidad Educativa Fe y Alegría La Dolorosa
+      <div className="border-t border-border/60 bg-primary-dark px-4 py-3.5 text-center text-xs text-white/80 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6">
+        <span>© {new Date().getFullYear()} PresenTech · Unidad Educativa Fe y Alegría La Dolorosa</span>
+        <span className="hidden sm:inline text-white/30">|</span>
+        <Link to="/creditos" className="hover:text-primary-foreground font-semibold underline decoration-dotted underline-offset-4 transition-colors">
+          Créditos y Acerca de
+        </Link>
       </div>
     </footer>
   )
